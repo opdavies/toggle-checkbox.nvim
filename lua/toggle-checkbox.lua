@@ -1,5 +1,9 @@
 local checked_character = "x"
 
+local line_contains_a_checked_checkbox = function(line)
+	return string.find(line, "[" .. checked_character .. "]")
+end
+
 local M = {}
 
 M.check = function(line)
