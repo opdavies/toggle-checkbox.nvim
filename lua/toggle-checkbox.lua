@@ -11,18 +11,21 @@ local current_line = vim.api.nvim_buf_get_lines(bufnr, cursor[1] - 1, cursor[1],
 -- 	return string.find(line, checked_checkbox)
 -- end
 
-local M = {}
-
-M.check = function()
-	local new_line = current_line:gsub("%[ %]", checked_checkbox)
+local write_line = function(new_line)
 	vim.api.nvim_buf_set_lines(bufnr, cursor[1] - 1, cursor[1], false, { new_line })
 	vim.api.nvim_win_set_cursor(0, cursor)
 end
 
+local M = {}
+
+M.check = function()
+	local new_line = current_line:gsub("%[ %]", checked_checkbox)
+	write_line(new_line)
+end
+
 M.uncheck = function()
 	local new_line = current_line:gsub("%[" .. checked_character .. "%]", unchecked_checkbox)
-	vim.api.nvim_buf_set_lines(bufnr, cursor[1] - 1, cursor[1], false, { new_line })
-	vim.api.nvim_win_set_cursor(0, cursor)
+	write_line(new_line)
 end
 
 return M
