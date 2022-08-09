@@ -6,7 +6,7 @@ Inspired by [jkramer/vim-checkbox](https://github.com/jkramer/vim-checkbox).
 
 ## Example
 
-This is an example of the TODOs that I had whilst writing this plugin:
+This is an example of the TODOs that I was using and testing with whilst writing this plugin:
 
 ```markdown
 - [ ] Check an unchecked checkbox
