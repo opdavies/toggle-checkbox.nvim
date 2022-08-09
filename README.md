@@ -1,6 +1,6 @@
 # toggle-checkbox.nvim
 
-A Neovim plugin for checking, unchecking and toggling Markdown checkboxes, written in Lua.
+A Neovim plugin for checking and unchecking Markdown checkboxes, written in Lua.
 
 Inspired by [jkramer/vim-checkbox](https://github.com/jkramer/vim-checkbox).
 
