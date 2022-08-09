@@ -23,5 +23,5 @@ This is an example of the TODOs that I had whilst writing this plugin:
 There are no default keymaps but these can be added using `vim.keymap.set()`:
 
 ```lua
-vim.keymap.set("n", "<leader>tt", ":lua require('toggle-checkboxes').toggle()")
+vim.keymap.set("n", "<leader>tt", ":lua require('toggle-checkbox').toggle()<CR>")
 ```
