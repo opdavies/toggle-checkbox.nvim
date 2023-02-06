@@ -38,4 +38,6 @@ M.toggle = function()
 	vim.api.nvim_win_set_cursor(0, cursor)
 end
 
+vim.api.nvim_create_user_command("ToggleCheckbox", M.toggle, {});
+
 return M
